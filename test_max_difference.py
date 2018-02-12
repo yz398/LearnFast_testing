@@ -1,5 +1,6 @@
 import pytest
-from max_difference import *
+
+from list_module.max_difference import max_difference
 
 
 def test_max_difference():

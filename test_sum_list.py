@@ -1,5 +1,5 @@
 import pytest
-from sum_list import *
+from list_module.sum_list import sum_list
 
 def test_sum_list():
     
