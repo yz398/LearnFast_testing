@@ -1,5 +1,5 @@
 import pytest
-from min_max_list import min_max_list
+from list_module.min_max_list import min_max_list 
 
 def test_min_max_list():
     
