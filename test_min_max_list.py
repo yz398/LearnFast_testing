@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[15]:
-
-
 import pytest
 
 def test_min_max_list():
