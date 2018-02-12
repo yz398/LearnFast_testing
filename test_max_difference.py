@@ -15,4 +15,4 @@ def test_max_difference():
     assert output1 == 5
     assert output2 == 51
     assert output3 == 28
-    assert output4 == 0
+    assert output4 == 2
