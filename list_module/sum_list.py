@@ -6,6 +6,7 @@ def sum_list(x):
     :type x: list
     :raises EmptyListException: if empty list is passed in
     :raises DictionaryException: if dict is passed in
+
     :return: sum of list
     :rtype: float
     """
@@ -18,8 +19,8 @@ def sum_list(x):
         logging.basicConfig(filename="./sum_list.log", filemode='w', 
                 level=logging.DEBUG)
     if not x: 
-        raise EmptyListException()
         logging.warning("Passed in an empty list")
+        raise EmptyListException()
         return None
     if type(x) == dict:
         raise DictionaryException()

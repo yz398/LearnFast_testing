@@ -5,6 +5,9 @@ DictionaryException)
 
 
 def test_sum_list():
+    """
+    Tests the sum_list function of the list_module
+    """
     test_data = ([1, 1, 1, 1], [0, 0], [5, -1, -10], [-9, -4], [1000, 2000, -1])
     test_answers = ([4, 0, -6, -13, 2999])
     for (example, ans) in zip(test_data, test_answers):
