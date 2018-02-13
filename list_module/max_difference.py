@@ -5,7 +5,4 @@ def max_difference(x):
         if index > 0:
             diff = fabs(x[index] - x[index-1])
             curr_max = max(curr_max, diff)
-            
     return curr_max
-
-
