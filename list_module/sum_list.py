@@ -16,9 +16,9 @@ def sum_list(x):
         print("Could not import logging module")
         return
     else:
-        logging.basicConfig(filename="./sum_list.log", filemode='w', 
-                level=logging.DEBUG)
-    if not x: 
+        logging.basicConfig(filename="./sum_list.log", filemode='w',
+                            level=logging.DEBUG)
+    if not x:
         logging.warning("Passed in an empty list")
         raise EmptyListException()
         return None
@@ -35,6 +35,7 @@ def sum_list(x):
     else:
         return float(the_sum)
 
+
 class CustomListExceptions(BaseException):
     """
     Custom set of exceptions for this list module
@@ -48,11 +49,13 @@ class CustomListExceptions(BaseException):
         """
         self.message = message
 
+
 class EmptyListException(CustomListExceptions):
     """
     Exception to be thrown if empty list is passed in
     """
     pass
+
 
 class DictionaryException(CustomListExceptions):
     """
