@@ -32,6 +32,9 @@ def sum_list(x):
     except TypeError:
         logging.error("Inccorect parameter type passed in")
         return None
+    if float('inf') in x or float('-inf') in x:
+        logging.warning("List contains infinite value")
+        raise ValueError
     else:
         return float(the_sum)
 

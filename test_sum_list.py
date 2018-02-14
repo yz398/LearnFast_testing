@@ -1,13 +1,16 @@
 import pytest
 
-from list_module.sum_list import (sum_list, EmptyListException,
-                                  DictionaryException)
-
 
 def test_sum_list():
     """
     Tests the sum_list function of the list_module
     """
+    try:
+        from list_module.sum_list import (sum_list, EmptyListException,
+                                          DictionaryException)
+    except ImportError as e:
+        print("Necessary import of module failed")
+        return
     test_data = ([1, 1, 1, 1], [0, 0], [5, -1, -10], [-9, -4],
                  [1000, 2000, -1])
     test_answers = ([4, 0, -6, -13, 2999])
@@ -20,3 +23,7 @@ def test_sum_list():
         sum_list([])
     with pytest.raises(DictionaryException):
         sum_list({1: 'a', 2: 'b'})
+    with pytest.raises(ValueError):
+        sum_list([float('inf'), 2])
+    with pytest.raises(ValueError):
+        sum_list([float('-inf'), 3.0])
