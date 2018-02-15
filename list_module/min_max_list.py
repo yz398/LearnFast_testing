@@ -12,8 +12,8 @@ def min_max_list(x):
     except ImportError:
         print('ImportError')
     else:
-        logging.basicConfig(filename='example.log',level=logging.DEBUG,filemode='w')
-    
+        logging.basicConfig(filename='example.log', level=logging.DEBUG, 
+                            filemode='w')   
     if type(x) is not list:
         logging.warning('Watch out!The input should be list')
         raise TypeError('TypeError with the input')
@@ -21,14 +21,13 @@ def min_max_list(x):
         try:
             float(index)
         except ValueError as err:
-            print('ValueError\n',err)
+            print('ValueError\n', err)
             logging.debug('if the type is string, it will let us know')
             return
         except TypeError as err:
             logging.error('the type of index is wrong')
-            print('TypeError\n',err)
-            return
-    
+            print('TypeError\n', err)
+            return   
     if not x:
         return (None, None)
     my_min = min(x)
