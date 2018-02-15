@@ -24,17 +24,17 @@ def min_max_list(x):
             float(index)
         except ValueError as err:
             print('ValueError\n', err)
-            raise ValueError('change the input')
             logging.debug('if the type is string, it will let us know')
-            return
+            raise ValueError('change the input style')
+            return 
         except TypeError as err:
-            raise TypeError('change the in put style')
             logging.debug('the type of index is wrong')
             print('TypeError\n', err)
-            return    
+            raise TypeError('change the in put style')
+            return     
     if not x:
-        return (None, None)
         logging.warning('no index there')
+        return (None, None)
     my_min = min(x)
     my_max = max(x)
     my_min_max = (my_min, my_max)
