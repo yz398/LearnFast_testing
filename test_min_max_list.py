@@ -4,6 +4,7 @@ import pytest
 def test_min_max_list():
     """
     tests for assignment5
+    prove everything well 
     """
     try:
         from list_module.min_max_list import min_max_list
