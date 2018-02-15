@@ -1,8 +1,14 @@
 import pytest
-from max_difference import *
-
 
 def test_max_difference():
+    """
+        To test the max_difference function in the list_module
+    """
+    try:
+        from list_module.max_difference import max_difference
+    except ImportError:
+        print('you import filed')
+
     test_data1 = [1, 5, 6, 7, 12]
     test_data2 = [3, 4, 5, 56, 45]
     test_data3 = [6, 34, 23, 45, 57]
