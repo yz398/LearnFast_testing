@@ -32,4 +32,4 @@ def test_min_max_list():
     assert test_answer3 == min_max_list(test_data3)
     assert test_answer4 == min_max_list(test_data4)
     assert test_answer5 == min_max_list(test_data5)
-    assert test_answer6 == min_max_list(test_data6) 
+    assert test_answer6 == min_max_list(test_data6)  
