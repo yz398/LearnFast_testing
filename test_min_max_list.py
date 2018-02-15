@@ -9,7 +9,7 @@ def test_min_max_list():
         from list_module.min_max_list import min_max_list
     except ImportError as err:
         print('big problem\n', err)
-        return        
+        return         
     test_data1 = [0, -3, -1.2, 10]
     test_data2 = [1, 3, 2, 5]
     test_data3 = [-3/2, -9, -3, -7, -1]

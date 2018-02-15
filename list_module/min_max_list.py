@@ -2,10 +2,12 @@ def min_max_list(x):
     """
     find the minimum and the maximum of a list and return a tuple
     :param x: the input should be a list
-    :returns: return a tuple include minimum and maximum of the list
     :raises ImportError: if the module not found
     :raises TypeError: if the input is not a list or the input includes string
     :raises ValueError:if the input includes string
+    
+    :returns: return a tuple include minimum and maximum of the list 
+    :rtype: (float,float)
     """
     try:
         import logging
@@ -27,11 +29,11 @@ def min_max_list(x):
         except TypeError as err:
             logging.error('the type of index is wrong')
             print('TypeError\n', err)
-            return   
+            return    
     if not x:
         return (None, None)
     my_min = min(x)
     my_max = max(x)
     my_min_max = (my_min, my_max)
     logging.info('well done')
-    return my_min_max
+    return my_min_max 
