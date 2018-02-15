@@ -17,7 +17,6 @@ def test_max_difference():
     output2 = max_difference(test_data2)
     output3 = max_difference(test_data3)
     output4 = max_difference(test_data4)
-
     assert output1 == 5
     assert output2 == 51
     assert output3 == 28
