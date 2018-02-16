@@ -1,13 +1,9 @@
-import pytest
-
-from list_module.max_difference import max_difference
-
-
 def test_max_difference():
     """
     To test the max_difference function in the list_module
     """
     try:
+        import pytest
         from list_module.max_difference import max_difference
     except ImportError:
         print("The necessary module for this test failed to import")
