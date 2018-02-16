@@ -20,8 +20,8 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = 'LearnFast_testing'
-copyright = '2018, Anika Mukherji, Zhiwei Kang, Zi Zhao'
-author = 'Anika Mukherji, Zhiwei Kang, Zi Zhao'
+copyright = '2018, Anika Mukherji, Zhiwei Kang, Yi Zhao'
+author = 'Anika Mukherji, Zhiwei Kang, Yi Zhao'
 
 # The short X.Y version
 version = ''
