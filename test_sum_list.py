@@ -4,8 +4,8 @@ def test_sum_list():
     """
     try:
         import pytest
-        from list_module.sum_list import (sum_list, EmptyListException,
-                                          DictionaryException)
+        from list_module.sum_list import (sum_list, EmptyError,
+                                          DictionaryError)
     except ImportError as e:
         print("Necessary imports failed")
         return
@@ -17,9 +17,9 @@ def test_sum_list():
     test_type_fails = ("BME", 590, 3.0)
     for type_fail in test_type_fails:
         assert sum_list(type_fail) is None
-    with pytest.raises(EmptyListException):
+    with pytest.raises(EmptyError):
         sum_list([])
-    with pytest.raises(DictionaryException):
+    with pytest.raises(DictionaryError):
         sum_list({1: 'a', 2: 'b'})
     with pytest.raises(ValueError):
         sum_list([float('inf'), 2])

@@ -29,13 +29,13 @@ def min_max_list(x):
             num = float(val)
         except ValueError:
             logging.debug("Type is not able to be cast to float")
-            raise ValueError
+            raise ValueError()
         except TypeError as err:
             logging.debug("Erroneous type encountered: {}".format(type(err)))
-            raise TypeError
+            raise TypeError()
         else:
             if num == float('inf') or num == float('-inf'):
-                raise ValueError
+                raise ValueError()
     my_min = min(x)
     my_max = max(x)
     my_min_max = (my_min, my_max)
