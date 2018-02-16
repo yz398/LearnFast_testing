@@ -1,15 +1,13 @@
-import pytest
-
-
 def test_sum_list():
     """
     Tests the sum_list function of the list_module
     """
     try:
+        import pytest
         from list_module.sum_list import (sum_list, EmptyListException,
                                           DictionaryException)
     except ImportError as e:
-        print("Necessary import of module failed")
+        print("Necessary imports failed")
         return
     test_data = ([1, 1, 1, 1], [0, 0], [5, -1, -10], [-9, -4],
                  [1000, 2000, -1])

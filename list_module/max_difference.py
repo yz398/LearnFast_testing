@@ -3,7 +3,7 @@ def max_difference(x):
         Returns the maximum difference of a list
         :param x: list to be input
         :type x: list
-        :raises TypeError: if input in is not a list
+        :raises TypeError: if input is not a list
         :raises ValueError: if the list contains a non-float or integer
         :raises ValueError: if list contains +/-infinity
 

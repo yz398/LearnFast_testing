@@ -1,9 +1,13 @@
-import pytest
-
-from list_module.min_max_list import min_max_list
-
-
 def test_min_max_list():
+    """
+    Tests the min_max_list function
+    """
+    try:
+        import pytest
+        from list_module.min_max_list import min_max_list
+    except ImportError:
+        print("Necessary imports for this test function failed")
+        return
     test_data1 = [0, -3, -1.2, 10]
     test_data2 = [1, 3, 2, 5]
     test_data3 = [-3/2, -9, -3, -7, -1]
@@ -16,3 +20,19 @@ def test_min_max_list():
     assert test_answer2 == min_max_list(test_data2)
     assert test_answer3 == min_max_list(test_data3)
     assert test_answer4 == min_max_list(test_data4)
+    with pytest.raises(TypeError):
+        min_max_list(5)
+    with pytest.raises(TypeError):
+        min_max_list('abc')
+    with pytest.raises(TypeError):
+        min_max_list({1: 4})
+    with pytest.raises(ValueError):
+        min_max_list(['s', 's'])
+    with pytest.raises(ValueError):
+        min_max_list(['-inf', 5])
+    with pytest.raises(ValueError):
+        min_max_list(['+inf', 5])
+    with pytest.raises(ValueError):
+        min_max_list([float('inf'), 5])
+    with pytest.raises(ValueError):
+        min_max_list([float('-inf'), 5])
