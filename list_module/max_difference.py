@@ -20,7 +20,7 @@ def max_difference(x):
                         level=logging.DEBUG)
     if type(x) is not list:
         logging.error("Input is not a list")
-        raise TypeError
+        raise TypeError()
     curr_max = 0.0
     for index, entry in enumerate(x):
         try:
@@ -30,7 +30,7 @@ def max_difference(x):
             return None
         if num == float('inf') or num == float('-inf'):
             logging.warning("List contains infinities")
-            raise ValueError
+            raise ValueError()
         if index > 0:
             diff = fabs(entry - x[index-1])
             curr_max = max(curr_max, diff)
