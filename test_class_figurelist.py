@@ -20,4 +20,5 @@ class test_figurelist():
     test_sum_list() 
     assert ls.min_max == (1,9) 
     assert ls.sum == 10
+    assert ls.max_diff == 8
 
